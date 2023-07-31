@@ -1,0 +1,9 @@
+# Première pipeline
+name: Pipepline de démosntration
+on: [push]
+
+jobs: 
+  mon-premier-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Ceci est mon premier job"
