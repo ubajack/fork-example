@@ -1,6 +1,8 @@
 # Première pipeline
 name: Pipepline de démonstration
-on: [push]
+on: 
+  push:
+    branches: [ "main" ]
 
 jobs:
   mon-premier-job:
