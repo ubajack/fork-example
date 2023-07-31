@@ -8,3 +8,19 @@ jobs:
     steps:
       - name: Test du premier job
         run: echo "Ceci est mon premier job"
+      - name: Affichage de l'id
+        run: echo "Id du job ${{github.GITHUB_JOB}}"
+  mon-second-job:
+    runs-on: ubuntu-latest
+    needs: mon-premier-job
+    steps:
+      - name: Affichage d'un message
+        run: echo "Run après le premier job"
+  mon-premier-job-clone:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test du premier job
+        run: echo "Ceci est mon premier job"
+      - name: Affichage de l'id
+        run: echo "Id du job ${{github.GITHUB_JOB}}"
+
