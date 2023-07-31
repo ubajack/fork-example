@@ -9,7 +9,7 @@ jobs:
       - name: Test du premier job
         run: echo "Ceci est mon premier job"
       - name: Affichage de l'id
-        run: echo "Id du job ${{GITHUB_JOB}}"
+        run: echo "Id du job ${{vars.GITHUB_JOB}}"
   mon-second-job:
     runs-on: ubuntu-latest
     needs: mon-premier-job
